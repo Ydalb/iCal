@@ -72,7 +72,14 @@ class Property
         }
 
         // Property value
-        $line .= ':' . $this->value->getEscapedValue();
+        // $line .= ':' . $this->value->getEscapedValue();
+        // @QLD
+        if($this->name != "RRULE") {
+            $line .= ':' . $this->value->getEscapedValue();
+        }
+        else {
+            $line .= ':' . stripslashes($this->value->getEscapedValue());
+        }
 
         return $line;
     }
