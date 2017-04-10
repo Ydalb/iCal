@@ -704,11 +704,11 @@ class Event extends Component
     }
 
     /**
-     * @param RecurrenceRule $recurrenceRule
+     * @param string $recurrenceRule
      *
      * @return $this
      */
-    public function addRecurrenceRule(RecurrenceRule $recurrenceRule)
+    public function addRecurrenceRule($recurrenceRule) // @QLD RecurrenceRule
     {
         $this->recurrenceRules[] = $recurrenceRule;
 
